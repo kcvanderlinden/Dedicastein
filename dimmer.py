@@ -2,10 +2,10 @@ from machine import Timer, Pin
 from micropython import alloc_emergency_exception_buf
 from math import acos, pi
 
-
+# only tested with a lamp
 class Dimmer:
     def __init__(self, pwm_pin, zc_pin, fpulse = 4000):
-        # alloc_emergency_exception_buf(100)
+        alloc_emergency_exception_buf(100)
         self._cnt    = 0
         self._freq   = 140
         self._timer  = Timer()
@@ -25,7 +25,6 @@ class Dimmer:
     def ZeroCrossover(self, arg):
         self.triacFiringPin.low()
         self._timer.init(freq=self._freq,mode=Timer.ONE_SHOT,callback=self.triacpulse)
-        # print("called")
     
     @property
     def value(self):
