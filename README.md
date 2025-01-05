@@ -17,8 +17,8 @@ replacing the board of a Delonghi Dedica EC685 with a Raspberry pico.
 - [x] Reading the temprature with the termoster 
 - [x] Turning the heating block on and off
 - [x] PID temprature control
-- [ ] Turning the pump on and off
-- [ ] Pump power control (AC dimmer)
+- [x] Turning the pump on and off
+- [x] Pump power control (AC dimmer)
 - [ ] Reading the flow sensor
 - [ ] Implement the steam wand
 - [x] Read the front buttons and control the LEDs
