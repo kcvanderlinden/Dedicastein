@@ -1,5 +1,8 @@
 A espresso machine can't be that complicated, can it?
 
+# WARNING
+This is an ongoing project which has not been fully tested. (re) Use at your own risk.
+
 # AIM
 replacing the board of a Delonghi Dedica EC685 with a Raspberry pico.
 
