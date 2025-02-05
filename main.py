@@ -1,7 +1,9 @@
 from thermoster import read_temperature
 from machine import Pin, PWM
 from PID import PID
+import asyncio
 import time
+from dedicamodules import handle_relay_by_buttons
 
 # Constants
 TARGET_TEMPERATURE = 80.0 # Desired temperature in Celsius
@@ -23,6 +25,8 @@ def get_temperature():
     return read_temperature()
 
 while True:
+    # Run the main event loop
+    asyncio.run(handle_relay_by_buttons())
     current_time = time.ticks_ms()
     current_temp = get_temperature()
     power = pid(current_temp)
